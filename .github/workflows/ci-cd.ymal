@@ -1,0 +1,19 @@
+name: Demo CI/CD
+
+on:
+  push:
+    breanches:[master, dev]
+
+  pull_request:
+    breanches:[master, dev]
+
+env:
+  PROJECT: "GITHUB ACTIONS TEST"
+  COURSE: FT9
+
+jobs:
+  demo:
+    runs-on: ubuntu-lates
+    steps:
+      -name: A bash command
+       run: echo "Hello ${{env.PROJECT}}, course ${{env.COURSE}}"
